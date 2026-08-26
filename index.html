@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Soniya & Tanish | Engagement</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #0d1b2a;
+    color: #e0e1dd;
+    font-family: 'Montserrat', sans-serif;
+    touch-action: pan-y;
+}
+
+
+/* =====================================================
+   MOBILE INVITATION CONTAINER
+===================================================== */
+
+.invitation {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   SLIDES
+===================================================== */
+
+.slides {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    transition:
+        transform 1.2s cubic-bezier(.77,0,.18,1);
+
+    will-change: transform;
+}
+
+.slide {
+    min-width: 100%;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: 
+        linear-gradient(
+            rgba(13, 27, 42, 0.82),
+            rgba(27, 38, 59, 0.88)
+        ),
+        url("couple.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* =====================================================
+   DECORATIVE BORDER
+===================================================== */
+
+.slide::before {
+    content: "";
+    position: absolute;
+
+    top: 18px;
+    left: 15px;
+    right: 15px;
+    bottom: 18px;
+
+    border: 1px solid rgba(183,139,114,.55);
+
+    pointer-events: none;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+
+    top: 25px;
+    left: 22px;
+    right: 22px;
+    bottom: 25px;
+
+    border: 1px solid rgba(183,139,114,.20);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   FLOWERS / DECORATION
+===================================================== */
+
+.flower {
+    position: absolute;
+    font-size: 42px;
+    color: #e9a5b4;
+    opacity: .65;
+    z-index: 2;
+}
+
+.flower.top-left {
+    top: 25px;
+    left: 18px;
+}
+
+.flower.top-right {
+    top: 25px;
+    right: 18px;
+}
+
+.flower.bottom-left {
+    bottom: 25px;
+    left: 18px;
+}
+
+.flower.bottom-right {
+    bottom: 25px;
+    right: 18px;
+}
+
+
+/* =====================================================
+   GOLD DOTS
+===================================================== */
+
+.dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #c9a35b;
+
+    opacity: .45;
+
+    animation: sparkle 4s infinite ease-in-out;
+}
+
+.dot1 { top: 15%; left: 12%; }
+.dot2 { top: 20%; right: 15%; }
+.dot3 { top: 38%; left: 7%; }
+.dot4 { top: 45%; right: 9%; }
+.dot5 { top: 62%; left: 14%; }
+.dot6 { top: 70%; right: 14%; }
+.dot7 { top: 82%; left: 8%; }
+.dot8 { top: 78%; right: 8%; }
+
+@keyframes sparkle {
+
+    0%,100% {
+        opacity: .2;
+        transform: scale(.7);
+    }
+
+    50% {
+        opacity: .8;
+        transform: scale(1.3);
+    }
+}
+
+
+/* =====================================================
+   SLIDE CONTENT
+===================================================== */
+
+.content {
+    width: 88%;
+    max-width: 480px;
+
+    position: relative;
+    z-index: 5;
+
+    animation: contentIn 1.4s ease;
+}
+
+@keyframes contentIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   SMALL TITLE
+===================================================== */
+
+.small-title {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #d4a373;
+
+    margin-bottom: 22px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   MAIN NAMES
+===================================================== */
+
+.names {
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(55px, 16vw, 90px);
+
+    line-height: 1.05;
+
+    color: #f4a261;
+
+    font-weight: 400;
+}
+
+.names span {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: .48em;
+
+    color: #e9c46a;
+
+    font-style: italic;
+
+    margin: 0 8px;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+    width: 100px;
+    height: 1px;
+
+    background: #e9c46a;
+
+    margin: 24px auto;
+}
+
+.divider::after {
+    content: "♥";
+
+    display: block;
+
+    position: relative;
+
+    top: -12px;
+
+    background: transparent;
+
+    color: #e9c46a;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.description {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 23px;
+
+    line-height: 1.5;
+
+    color: #e0e1dd;
+}
+
+
+/* =====================================================
+   PARENTS
+===================================================== */
+
+.parents {
+    margin-bottom: 28px;
+}
+
+.parents-label {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #d4a373;
+
+    margin-bottom: 14px;
+}
+
+.parent-name {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+
+    line-height: 1.35;
+
+    color: #e0e1dd;
+}
+
+.parent-and {
+    font-family: 'Cormorant Garamond', serif;
+
+    color: #e9c46a;
+
+    font-size: 20px;
+
+    margin: 3px 0;
+}
+
+
+/* =====================================================
+   FAMILY SLIDE
+===================================================== */
+
+.family-title {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 48px;
+
+    color: #f4a261;
+
+    margin-bottom: 25px;
+}
+
+.family-title span {
+    color: #e9c46a;
+
+    font-style: italic;
+}
+
+.family-text {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 22px;
+
+    line-height: 1.7;
+
+    color: #e0e1dd;
+}
+
+.family-line {
+    width: 80px;
+
+    height: 1px;
+
+    background: #e9c46a;
+
+    margin: 22px auto;
+}
+
+
+/* =====================================================
+   GRAND DAUGHTER SEPARATE PAGE
+===================================================== */
+
+.grand-page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #d4a373;
+    margin-bottom: 10px;
+}
+
+.grand-page-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    line-height: 1.5;
+    color: #e0e1dd;
+    margin-bottom: 20px;
+}
+
+.grand-page-hero {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: #e9c46a;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.grand-page-name-highlight {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(65px, 18vw, 100px);
+    color: #f4a261;
+    line-height: 1.1;
+}
+
+
+/* =====================================================
+   PROMINENT GLASSMORPHISM (EVENT & VENUE CARDS)
+===================================================== */
+
+.event-box,
+.venue-card {
+    width: 92%;
+    margin: auto;
+    padding: 42px 20px;
+    background: rgba(13, 27, 42, 0.75);
+    border: 1.5px solid rgba(233, 196, 106, 0.5);
+    border-radius: 16px;
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    box-shadow: 
+        0 20px 45px rgba(0, 0, 0, 0.4),
+        inset 0 1px 2px rgba(255, 255, 255, 0.15),
+        0 0 0 1px rgba(233, 196, 106, 0.25);
+}
+
+.event-icon {
+    font-size: 42px;
+
+    margin-bottom: 12px;
+}
+
+.event-title {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 48px;
+
+    color: #f4a261;
+}
+
+.event-subtitle {
+    margin-top: 8px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #d4a373;
+}
+
+.event-date {
+    margin-top: 25px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 27px;
+
+    color: #e0e1dd;
+}
+
+.event-time {
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    color: #e9c46a;
+}
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown-title {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 43px;
+
+    color: #f4a261;
+}
+
+.countdown-title span {
+    color: #e9c46a;
+
+    font-style: italic;
+}
+
+.countdown {
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.time-box {
+    padding: 18px 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(233, 196, 106, 0.4);
+    background: rgba(13, 27, 42, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(233, 196, 106, 0.15);
+}
+
+.time-box strong {
+    display: block;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 40px;
+
+    font-weight: 500;
+
+    color: #f4a261;
+}
+
+.time-box span {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #d4a373;
+}
+
+
+/* =====================================================
+   VENUE
+===================================================== */
+
+.venue-title {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 42px;
+
+    color: #f4a261;
+
+    margin-bottom: 18px;
+}
+
+.venue-address {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+
+    color: #e0e1dd;
+}
+
+.map-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    border: 1px solid rgba(233, 196, 106, 0.8);
+    color: #ffffff;
+    background: linear-gradient(135deg, #b78b72, #9c7159);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-btn:active {
+    transform: scale(0.97);
+}
+
+
+/* =====================================================
+   FINAL SLIDE
+===================================================== */
+
+.final-title {
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 65px;
+
+    color: #f4a261;
+
+    line-height: 1.2;
+}
+
+.final-text {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 23px;
+
+    line-height: 1.6;
+
+    margin-top: 25px;
+
+    color: #e0e1dd;
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music-btn {
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 22px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.7);
+
+    background: #b78b72;
+
+    color: white;
+
+    font-size: 19px;
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+
+
+/* =====================================================
+   SLIDE DOTS
+===================================================== */
+
+.slide-dots {
+    position: fixed;
+
+    right: 12px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 999;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.slide-dot {
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: rgba(233,196,106,.35);
+
+    transition: .4s;
+}
+
+.slide-dot.active {
+    height: 22px;
+
+    border-radius: 5px;
+
+    background: #e9c46a;
+}
+
+
+/* =====================================================
+   DESKTOP MESSAGE
+===================================================== */
+
+.desktop-message {
+    display: none;
+}
+
+
+/* =====================================================
+   MOBILE ONLY
+===================================================== */
+
+@media (min-width: 601px) {
+
+    body {
+        background: #242020;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+    .invitation {
+        width: 390px;
+
+        height: 844px;
+
+        max-height: 100vh;
+
+        box-shadow:
+            0 0 50px rgba(0,0,0,.5);
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .names {
+        font-size: 53px;
+    }
+
+    .family-title {
+        font-size: 40px;
+    }
+
+    .event-title {
+        font-size: 42px;
+    }
+
+    .venue-title {
+        font-size: 37px;
+    }
+
+    .content {
+        width: 86%;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="invitation">
+
+
+<!-- ===================================================
+     SLIDES CONTAINER
+=================================================== -->
+
+<div class="slides" id="slides">
+
+
+<!-- ===================================================
+     SLIDE 1
+     WELCOME
+=================================================== -->
+
+<section class="slide">
+
+    <div class="flower top-left">🌸</div>
+    <div class="flower top-right">🌸</div>
+
+    <div class="dot dot1"></div>
+    <div class="dot dot2"></div>
+    <div class="dot dot3"></div>
+
+    <div class="content">
+
+        <div class="small-title">
+            WITH LOVE & BLESSINGS
+        </div>
+
+        <div class="names">
+            Soniya
+            <span>&</span>
+            Tanish
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="description">
+            We look forward to<br>
+            your gracious presence
+        </div>
+
+    </div>
+
+    <div class="flower bottom-left">🌸</div>
+    <div class="flower bottom-right">🌸</div>
+
+</section>
+
+
+
+<!-- ===================================================
+     SLIDE 2
+     FAMILY
+=================================================== -->
+
+<section class="slide">
+
+    <div class="flower top-left">🌸</div>
+    <div class="flower top-right">🌸</div>
+
+    <div class="content">
+
+        <div class="small-title">
+            WITH LOVE & BLESSINGS
+        </div>
+
+        <h2 class="family-title">
+            Malode <span>Family</span>
+        </h2>
+
+        <div class="family-line"></div>
+
+        <div class="family-text">
+
+            Shri. Pandarinath Vaman Rao Malode
+
+            <br>
+
+            &
+
+            <br>
+
+            Smt. Jyoti Pandharinath Malode
+
+        </div>
+
+        <div class="family-line"></div>
+
+        <div class="description">
+            Cordially invite you to<br>
+            their daughter's engagement ceremony
+        </div>
+
+    </div>
+
+    <div class="flower bottom-left">🌸</div>
+    <div class="flower bottom-right">🌸</div>
+
+</section>
+
+
+
+<!-- ===================================================
+     SLIDE 3
+     GRAND DAUGHTER (SEPARATE PAGE)
+=================================================== -->
+
+<section class="slide">
+
+    <div class="flower top-left">🌸</div>
+    <div class="flower top-right">🌸</div>
+
+    <div class="content">
+
+        <div class="small-title">
+            PROUD LINEAGE
+        </div>
+
+        <div class="grand-page-title">
+            Grand D/O of late
+        </div>
+
+        <div class="grand-page-names">
+            Smt. Anasuya &<br>
+            late Shri. Vamanrao R. Malode
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="grand-page-hero">
+            Grand Daughter
+        </div>
+
+        <div class="grand-page-name-highlight">
+            Soniya
+        </div>
+
+    </div>
+
+    <div class="flower bottom-left">🌸</div>
+    <div class="flower bottom-right">🌸</div>
+
+</section>
+
+
+
+<!-- ===================================================
+     SLIDE 4
+     COUPLE
+=================================================== -->
+
+<section class="slide">
+
+    <div class="content">
+
+        <div class="small-title">
+            THE BEAUTIFUL COUPLE
+        </div>
+
+        <div class="names">
+            Soniya
+            <span>&</span>
+            Tanish
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="description">
+
+            Two souls
+
+            <br>
+
+            One beautiful story
+
+            <br>
+
+            One forever beginning
+
+        </div>
+
+        <br>
+
+        <div class="small-title">
+            THE BRIDE & THE GROOM
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================
+     SLIDE 5
+     ENGAGEMENT EVENT
+=================================================== -->
+
+<section class="slide">
+
+    <div class="content">
+
+        <div class="small-title">
+            JOIN US FOR
+        </div>
+
+        <div class="event-box">
+
+            <div class="event-icon">
+                💍
+            </div>
+
+            <div class="event-title">
+                Engagement
+            </div>
+
+            <div class="event-subtitle">
+                CELEBRATION
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="event-date">
+                Sunday<br>
+                06 September 2026
+            </div>
+
+            <div class="event-time">
+                12:15 PM
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================
+     SLIDE 6
+     COUNTDOWN
+=================================================== -->
+
+<section class="slide">
+
+    <div class="content">
+
+        <div class="small-title">
+            SAVE THE DATE
+        </div>
+
+        <h2 class="countdown-title">
+            Counting Down To
+            <span>Forever</span>
+        </h2>
+
+        <div class="countdown">
+
+            <div class="time-box">
+
+                <strong id="days">
+                    00
+                </strong>
+
+                <span>
+                    DAYS
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <strong id="hours">
+                    00
+                </strong>
+
+                <span>
+                    HOURS
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <strong id="minutes">
+                    00
+                </strong>
+
+                <span>
+                    MINUTES
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <strong id="seconds">
+                    00
+                </strong>
+
+                <span>
+                    SECONDS
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================
+     SLIDE 7
+     VENUE
+=================================================== -->
+
+<section class="slide">
+
+    <div class="content">
+
+        <div class="small-title">
+            WHERE WE MEET
+        </div>
+
+        <div class="venue-card">
+
+            <div class="venue-title">
+                Engagement<br>
+                Hall
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="venue-address">
+
+                Inchal Road,<br>
+                Bailhongal
+
+                <br><br>
+
+                Sunday · 06 September 2026
+
+                <br>
+
+                12:15 PM
+
+            </div>
+
+            <a
+                href="https://maps.app.goo.gl/1QLAwumuyGSrf8Wr8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="map-btn"
+            >
+                📍 VIEW LOCATION
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================
+     SLIDE 8
+     FINAL
+=================================================== -->
+
+<section class="slide">
+
+    <div class="content">
+
+        <div class="small-title">
+            YOUR PRESENCE MATTERS
+        </div>
+
+        <div class="final-title">
+            See You There
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="final-text">
+
+            We would be honored<br>
+            to celebrate this beautiful<br>
+            beginning with you.
+
+            <br><br>
+
+            Soniya & Tanish
+
+        </div>
+
+    </div>
+
+   
+
+</section>
+
+
+</div>
+
+
+<!-- ===================================================
+     SLIDE DOTS
+=================================================== -->
+
+<div class="slide-dots" id="slideDots">
+
+    <div class="slide-dot active"></div>
+    <div class="slide-dot"></div>
+    <div class="slide-dot"></div>
+    <div class="slide-dot"></div>
+    <div class="slide-dot"></div>
+    <div class="slide-dot"></div>
+    <div class="slide-dot"></div>
+    <div class="slide-dot"></div>
+
+</div>
+
+
+<!-- ===================================================
+     MUSIC
+=================================================== -->
+
+<button
+    class="music-btn"
+    onclick="toggleMusic()"
+    id="musicButton"
+>
+    ♪
+</button>
+
+
+<audio
+    id="music"
+    loop
+>
+
+    <source
+        src="music.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   SLIDE SYSTEM
+===================================================== */
+
+const slidesContainer =
+    document.getElementById("slides");
+
+const slideDots =
+    document.querySelectorAll(".slide-dot");
+
+const totalSlides = 8;
+
+let currentSlide = 0;
+
+
+/* =====================================================
+   CHANGE SLIDE
+===================================================== */
+
+function goToSlide(index) {
+
+    if (index < 0) {
+        index = totalSlides - 1;
+    }
+
+    if (index >= totalSlides) {
+        index = 0;
+    }
+
+    currentSlide = index;
+
+    slidesContainer.style.transform =
+        `translateX(-${currentSlide * 100}%)`;
+
+    slideDots.forEach((dot, i) => {
+
+        dot.classList.toggle(
+            "active",
+            i === currentSlide
+        );
+
+    });
+
+}
+
+
+/* =====================================================
+   NEXT SLIDE
+===================================================== */
+
+function nextSlide() {
+
+    goToSlide(currentSlide + 1);
+
+}
+
+
+/* =====================================================
+   PREVIOUS SLIDE
+===================================================== */
+
+function previousSlide() {
+
+    goToSlide(currentSlide - 1);
+
+}
+
+
+/* =====================================================
+   AUTO SLIDE
+===================================================== */
+
+/*
+   Change this number if you want.
+   6000 = 6 seconds
+*/
+
+let autoSlide =
+    setInterval(nextSlide, 6000);
+
+
+/* =====================================================
+   DOT CLICK
+===================================================== */
+
+slideDots.forEach((dot, index) => {
+
+    dot.addEventListener("click", function() {
+
+        goToSlide(index);
+
+        restartAutoSlide();
+
+    });
+
+});
+
+
+/* =====================================================
+   RESTART AUTO SLIDE
+===================================================== */
+
+function restartAutoSlide() {
+
+    clearInterval(autoSlide);
+
+    autoSlide =
+        setInterval(nextSlide, 6000);
+
+}
+
+
+
+/* =====================================================
+   TOUCH / SWIPE
+===================================================== */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const invitation =
+    document.querySelector(".invitation");
+
+
+invitation.addEventListener(
+    "touchstart",
+    function(event) {
+
+        touchStartX =
+            event.changedTouches[0].screenX;
+
+    },
+    { passive: true }
+);
+
+
+invitation.addEventListener(
+    "touchend",
+    function(event) {
+
+        touchEndX =
+            event.changedTouches[0].screenX;
+
+        handleSwipe();
+
+    },
+    { passive: true }
+);
+
+
+function handleSwipe() {
+
+    const difference =
+        touchStartX - touchEndX;
+
+    /* Swipe left */
+
+    if (difference > 50) {
+
+        nextSlide();
+
+        restartAutoSlide();
+
+    }
+
+    /* Swipe right */
+
+    if (difference < -50) {
+
+        previousSlide();
+
+        restartAutoSlide();
+
+    }
+
+}
+
+
+
+/* =====================================================
+   KEYBOARD
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "ArrowRight") {
+
+            nextSlide();
+
+            restartAutoSlide();
+
+        }
+
+        if (event.key === "ArrowLeft") {
+
+            previousSlide();
+
+            restartAutoSlide();
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+const engagementDate =
+    new Date(
+        "September 06, 2026 12:15:00"
+    ).getTime();
+
+
+function updateCountdown() {
+
+    const now =
+        new Date().getTime();
+
+    const distance =
+        engagementDate - now;
+
+
+    if (distance <= 0) {
+
+        document.getElementById("days")
+            .innerHTML = "00";
+
+        document.getElementById("hours")
+            .innerHTML = "00";
+
+        document.getElementById("minutes")
+            .innerHTML = "00";
+
+        document.getElementById("seconds")
+            .innerHTML = "00";
+
+        return;
+
+    }
+
+
+    const days =
+        Math.floor(
+            distance /
+            (1000 * 60 * 60 * 24)
+        );
+
+
+    const hours =
+        Math.floor(
+            (distance %
+            (1000 * 60 * 60 * 24))
+            /
+            (1000 * 60 * 60)
+        );
+
+
+    const minutes =
+        Math.floor(
+            (distance %
+            (1000 * 60 * 60))
+            /
+            (1000 * 60)
+        );
+
+
+    const seconds =
+        Math.floor(
+            (distance %
+            (1000 * 60))
+            /
+            1000
+        );
+
+
+    document.getElementById("days")
+        .innerHTML =
+        String(days).padStart(2,"0");
+
+
+    document.getElementById("hours")
+        .innerHTML =
+        String(hours).padStart(2,"0");
+
+
+    document.getElementById("minutes")
+        .innerHTML =
+        String(minutes).padStart(2,"0");
+
+
+    document.getElementById("seconds")
+        .innerHTML =
+        String(seconds).padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+const music =
+    document.getElementById("music");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+
+function toggleMusic() {
+
+    if (music.paused) {
+
+        music.play()
+        .then(() => {
+
+            musicButton.innerHTML = "❚❚";
+
+        })
+        .catch(() => {
+
+            alert(
+                "Tap the music button again to play the music."
+            );
+
+        });
+
+    }
+
+    else {
+
+        music.pause();
+
+        musicButton.innerHTML = "♪";
+
+    }
+
+}
+
+
+/* =====================================================
+   FIRST TOUCH MUSIC
+===================================================== */
+
+/*
+   Mobile browsers normally block
+   automatic audio playback.
+
+   The first user interaction allows
+   the music button to work.
+*/
+
+document.addEventListener(
+    "touchstart",
+    function() {
+
+        // Do not automatically play music.
+        // User can press ♪ to start it.
+
+    },
+    { once: true }
+);
+
+</script>
+
+
+</body>
+</html>
